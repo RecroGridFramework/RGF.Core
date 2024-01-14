@@ -18,7 +18,7 @@
     <Year2>$([System.DateTime]::Now.ToString(yy))</Year2>
     <DateMd>$([System.DateTime]::Now.ToString(MMdd))</DateMd>
     <VersionRevision>1</VersionRevision>
-    <Version>6.2.0</Version>
+    <Version>6.3.0</Version>
     <FileVersion>$(Version).$(VersionRevision)$(DateMd)</FileVersion>
     <InformationalVersion>$(Version).$(Year2).$(DateMd).$(VersionRevision)</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
@@ -36,12 +36,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
-  <Target Name="Recrovit-signtool" AfterTargets="PostBuildEvent" Condition="'$(Configuration)'=='Release' and Exists('$(ProjectDir)..\..\signtool.bat')">
-    <Exec Command="$(ProjectDir)..\..\signtool.bat $(ProjectDir)$(OutputPath)$(TargetFileName)" />
+  <Target Name="Recrovit-signtool" AfterTargets="PostBuildEvent" Condition="'$(Configuration)'=='Release' and Exists('$(ProjectDir)..\..\dist\signtool.bat')">
+    <Exec Command="$(ProjectDir)..\..\dist\signtool.bat $(ProjectDir)$(OutputPath)$(TargetFileName)" />
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="RecroGrid" Version="6.2.0" Condition="'$(Configuration)'=='Release'" />
+    <PackageReference Include="RecroGrid" Version="6.3.0" Condition="'$(Configuration)'=='Release'" />
     <ProjectReference Include="..\..\RGF.Legacy\src\RGF.csproj" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
 
