@@ -12,13 +12,13 @@
 
   <PropertyGroup>
     <Company>Recrovit Kft.</Company>
-    <Product>RecroGrid Framework Core</Product>
+    <Product>RecroGrid Framework</Product>
     <Copyright>© Recrovit Kft. All rights reserved.</Copyright>
 
     <Year2>$([System.DateTime]::Now.ToString(yy))</Year2>
     <DateMd>$([System.DateTime]::Now.ToString(MMdd))</DateMd>
     <VersionRevision>1</VersionRevision>
-    <Version>6.4.0</Version>
+    <Version>6.5.0</Version>
     <FileVersion>$(Version).$(VersionRevision)$(DateMd)</FileVersion>
     <InformationalVersion>$(Version).$(Year2).$(DateMd).$(VersionRevision)</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
@@ -26,7 +26,6 @@
 
   <PropertyGroup>
     <Authors>$(Company)</Authors>
-    <Title>$(Product)</Title>
     <PackageOutputPath>..\..\dist</PackageOutputPath>
     <PackageProjectUrl>https://recrogrid.com/</PackageProjectUrl>
     <Description>RecroGrid Framework Core includes server-side functionality and API endpoints.</Description>
@@ -41,7 +40,7 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="RecroGrid" Version="6.4.0" Condition="'$(Configuration)'=='Release'" />
+    <PackageReference Include="RecroGrid" Version="6.5.0" Condition="'$(Configuration)'=='Release'" />
     <ProjectReference Include="..\..\RGF.Legacy\src\RGF.csproj" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
 
