@@ -2,7 +2,7 @@
 ------------ RecroGrid Framework ------------
 -------------------------------------------------
 
-Documentation: https://RecroGrid.com/docs
+https://RecroGridFramework.com/
 
 Quickstart:
 -------------------------------------------------------------------------
