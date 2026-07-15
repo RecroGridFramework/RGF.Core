@@ -7,8 +7,15 @@
     <RGFCustomSql>false</RGFCustomSql>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Version>10.2.1</Version>
+    <FileVersion>$(Version).1$([System.DateTime]::Now.ToString('MMdd'))</FileVersion>
+    <InformationalVersion>$(FileVersion)</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="RecroGrid" Version="10.1.1" Condition="'$(Configuration)'=='Release'" />
+    <PackageReference Include="RecroGrid" Version="10.2.1" Condition="'$(Configuration)'=='Release'" />
     <ProjectReference Include="..\..\RGF.Legacy\src\RGF.csproj" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
 

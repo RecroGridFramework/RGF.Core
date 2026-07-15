@@ -22,18 +22,10 @@
     <RepositoryUrl>https://github.com/Recrovit/rgf-core</RepositoryUrl>
   </PropertyGroup>
 
-  <!-- Versioning -->
-  <PropertyGroup>
-    <Version>10.1.1</Version>
-    <FileVersion>$(Version).1$([System.DateTime]::Now.ToString('MMdd'))</FileVersion>
-    <InformationalVersion>$(FileVersion)</InformationalVersion>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-  </PropertyGroup>
-
   <!-- Publishing -->
   <PropertyGroup Condition="'$(IsPackable)' != 'false'">
     <PackageProjectUrl>https://recrogridframework.com/</PackageProjectUrl>
-    <PackageTags>recrogrid dotnet ef api</PackageTags>
+    <PackageTags>RecroGrid Grid List Form Data EntityFramework EFCore Database API</PackageTags>
     <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
